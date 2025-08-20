@@ -6,7 +6,7 @@ compute_trim
 """
 import numpy as np
 from scipy.optimize import minimize
-from tools.rotations import Euler2Quaternion
+from tools.rotations import euler_to_quaternion
 from message_types.msg_delta import MsgDelta
 import time
 

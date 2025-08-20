@@ -1,0 +1,18 @@
+[project]
+name = "mavsim-python"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.9.4",
+    "numpy-stl>=3.1.2",
+    "numpy>=2.0.2",
+    "opencv-python>=4.12.0.88",
+    "pillow>=11.3.0",
+    "pynput>=1.8.1",
+    "pyopengl>=3.1.10",
+    "pyqt6>=6.9.1",
+    "pyqtgraph>=0.13.7",
+    "scipy>=1.13.1",
+]
