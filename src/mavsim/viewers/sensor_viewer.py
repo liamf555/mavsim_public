@@ -9,7 +9,7 @@ part of mavsimPy
         2/27/2020 - RWB
         1/19/2023 - DLC
 """
-from plotter.plotter import Plotter
+from mavsim.plotter.plotter import Plotter
 import numpy as np
 
 class SensorViewer:

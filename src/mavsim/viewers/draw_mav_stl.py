@@ -8,7 +8,8 @@ mavsim_python: drawing tools
 """
 import numpy as np
 import pyqtgraph.opengl as gl
-from tools.rotations import euler_to_rotation
+from mavsim.tools.rotations import euler_to_rotation
+from pathlib import Path
 from stl import mesh
 
 class DrawMav:
@@ -33,7 +34,7 @@ class DrawMav:
         self.R_ned = np.array([[0, 1, 0], [1, 0, 0], [0, 0, -1]])
 
         # get stl mesh
-        stl_mesh = mesh.Mesh.from_file('viewers/aircraft1.stl')
+        stl_mesh = mesh.Mesh.from_file(Path(__file__).parent / 'aircraft1.stl')
         self.mav_points = self.unit_length*stl_mesh.points.reshape(-1, 3)
         self.mav_points = self.rotate_points(self.mav_points, np.diag([-1, -1, 1])@self.R_ned.T)
         self.mav_faces = np.arange(self.mav_points.shape[0]).reshape(-1, 3)

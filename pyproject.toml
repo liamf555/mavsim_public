@@ -1,0 +1,22 @@
+[project]
+name = "mavsim"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.3.2",
+    "scipy>=1.16.1",
+    "matplotlib>=3.10.5",
+    "pyqtgraph>=0.13.7",
+    "pyqt6>=6.9.1",
+    "pyopengl>=3.1.10",
+    "pynput>=1.8.1",
+    "opencv-python>=4.11.0.86",
+    "pillow>=11.3.0",
+    "numpy-stl>=3.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

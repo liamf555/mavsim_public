@@ -7,7 +7,7 @@ part of mavsim
     - Updated:
         4/1/2022 - RWB
 """
-import parameters.camera_parameters as CAM
+import mavsim.parameters.camera_parameters as CAM
 
 
 class MsgCamera:

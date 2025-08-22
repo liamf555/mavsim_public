@@ -10,16 +10,11 @@ mavsimPy
 """
 import os, sys
 # insert parent directory at beginning of python search path
-from pathlib import Path
-sys.path.insert(0,os.fspath(Path(__file__).parents[2]))
-# use QuitListener for Linux or PC <- doesn't work on Mac
-#from python_tools.quit_listener import QuitListener
-import parameters.simulation_parameters as SIM
-from message_types.msg_state import MsgState
-from viewers.view_manager import ViewManager
+import mavsim.parameters.simulation_parameters as SIM
+from mavsim.message_types.msg_state import MsgState
+from mavsim.viewers.view_manager import ViewManager
 import time
 
-# #quitter = QuitListener()
 state = MsgState()
 viewers = ViewManager(mav=True, 
                       video=False, video_name='chap2.mp4')

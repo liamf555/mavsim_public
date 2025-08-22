@@ -6,23 +6,23 @@ mavsim: manage_viewers
         4/1/2024 - RWB
 """
 import pyqtgraph as pg
-from viewers.mav_viewer import MavViewer
-# from viewers.mav_path_viewer import MavAndPathViewer
-# from viewers.mav_waypoint_viewer import MAVAndWaypointViewer
-# from viewers.mav_world_viewer import MAVWorldViewer
-# from viewers.mav_viewer_camera import MAVWorldCameraViewer
-from viewers.planner_viewer import PlannerViewer
-from viewers.data_viewer import DataViewer
-from viewers.sensor_viewer import SensorViewer
-from viewers.camera_viewer import CameraViewer
-# from viewers.geolocation_viewer import GeolocationViewer
-import parameters.simulation_parameters as SIM
-from message_types.msg_state import MsgState
-from message_types.msg_delta import MsgDelta
-from message_types.msg_sensors import MsgSensors
-from message_types.msg_path import MsgPath
-from message_types.msg_waypoints import MsgWaypoints
-from message_types.msg_world_map import MsgWorldMap
+from mavsim.viewers.mav_viewer import MavViewer
+# from mavsim.viewers.mav_path_viewer import MavAndPathViewer
+# from mavsim.viewers.mav_waypoint_viewer import MAVAndWaypointViewer
+# from mavsim.viewers.mav_world_viewer import MAVWorldViewer
+# from mavsim.viewers.mav_viewer_camera import MAVWorldCameraViewer
+from mavsim.viewers.planner_viewer import PlannerViewer
+from mavsim.viewers.data_viewer import DataViewer
+from mavsim.viewers.sensor_viewer import SensorViewer
+from mavsim.viewers.camera_viewer import CameraViewer
+# from mavsim.viewers.geolocation_viewer import GeolocationViewer
+from mavsim.parameters import simulation_parameters as SIM
+from mavsim.message_types.msg_state import MsgState
+from mavsim.message_types.msg_delta import MsgDelta
+from mavsim.message_types.msg_sensors import MsgSensors
+from mavsim.message_types.msg_path import MsgPath
+from mavsim.message_types.msg_waypoints import MsgWaypoints
+from mavsim.message_types.msg_world_map import MsgWorldMap
 
 class ViewManager:
     def __init__(self, 
@@ -157,4 +157,3 @@ class ViewManager:
                 self.sensor_view.save_plot_image(sensorplot_name)
         if self.video_flag: 
             self.video.close()
-
